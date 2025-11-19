@@ -33,9 +33,17 @@ demo/crimescope_report.json
 
 ## 🏗️ Architecture Overview
 
-data_intake → crime_classifier → pattern_miner
+🟦 data_intake
 ↓
-hotspot_detector → risk_factor → report_writer
+🟩 crime_classifier
+↓
+🟨 pattern_miner
+↓
+🟧 hotspot_detector
+↓
+🟥 risk_factor
+↓
+🔵 report_writer
 
 CrimeScope uses a **Persistent A2A Message Bus**, which stores:
 
